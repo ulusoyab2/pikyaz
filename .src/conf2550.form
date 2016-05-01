@@ -1,0 +1,249 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,82,68)
+  { PictureBox1 PictureBox
+    MoveScaled(14,-42,54,118)
+    Stretch = True
+  }
+  { Panel8 Panel
+    MoveScaled(12,22,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel9 Panel
+    MoveScaled(12,19,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel11 Panel
+    MoveScaled(66,22,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel12 Panel
+    MoveScaled(66,19,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel13 Panel
+    MoveScaled(66,16,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel14 Panel
+    MoveScaled(66,13,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel15 Panel
+    MoveScaled(66,10,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel17 Panel
+    MoveScaled(66,1,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel18 Panel
+    MoveScaled(66,4,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel19 Panel
+    MoveScaled(66,7,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Label10 Label
+    MoveScaled(0,22,11.7143,3)
+    Text = ("RA7=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Label11 Label
+    MoveScaled(0,19,11.7143,3)
+    Text = ("RA6=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Label12 Label
+    MoveScaled(70,22,11.7143,3)
+    Text = ("RB0=GİRİŞ")
+    Alignment = Align.Left
+  }
+  { Label13 Label
+    MoveScaled(70,19,11.7143,3)
+    Text = ("RB1=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label14 Label
+    MoveScaled(70,16,11.7143,3)
+    Text = ("RB2=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label15 Label
+    MoveScaled(70,13,11.7143,3)
+    Text = ("RB3=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label16 Label
+    MoveScaled(70,10,11.7143,3)
+    Text = ("RB4=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label17 Label
+    MoveScaled(70,7,11.7143,3)
+    Text = ("RB5=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label18 Label
+    MoveScaled(70,4,11.7143,3)
+    Text = ("RB6=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Label19 Label
+    MoveScaled(70,1,11.7143,3)
+    Text = ("RB7=ÇIKIŞ")
+    Alignment = Align.Left
+  }
+  { Panel35 Panel
+    MoveScaled(66,43,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel36 Panel
+    MoveScaled(66,40,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel37 Panel
+    MoveScaled(66,37,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel38 Panel
+    MoveScaled(65,49,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel39 Panel
+    MoveScaled(66,34,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel40 Panel
+    MoveScaled(66,25,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel41 Panel
+    MoveScaled(66,28,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Panel42 Panel
+    MoveScaled(66,31,3.7143,2.2857)
+    Background = &HFF0000&
+  }
+  { Label40 Label
+    MoveScaled(70,40,11.7143,3)
+    Text = ("RC1=ÇIKIŞ")
+  }
+  { Label41 Label
+    MoveScaled(70,43,11.7143,3)
+    Text = ("RC0=ÇIKIŞ")
+  }
+  { Label42 Label
+    MoveScaled(69,49,11.7143,3)
+    Text = ("RC3=ÇIKIŞ")
+  }
+  { Label43 Label
+    MoveScaled(70,37,11.7143,3)
+    Text = ("RC2=ÇIKIŞ")
+  }
+  { Label44 Label
+    MoveScaled(70,31,11.7143,3)
+    Text = ("RC5=ÇIKIŞ")
+  }
+  { Label45 Label
+    MoveScaled(70,34,11.7143,3)
+    Text = ("RC4=ÇIKIŞ")
+  }
+  { Label46 Label
+    MoveScaled(70,25,11.7143,3)
+    Text = ("RC7=ÇIKIŞ")
+  }
+  { Label47 Label
+    MoveScaled(70,28,11.7143,3)
+    Text = ("RC6=ÇIKIŞ")
+  }
+  { Label5 Label
+    MoveScaled(0,25,11.7143,3)
+    Text = ("RA0=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Panel3 Panel
+    MoveScaled(12,28,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel4 Panel
+    MoveScaled(12,31,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Label7 Label
+    MoveScaled(0,31,11.7143,3)
+    Text = ("RA2=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Label6 Label
+    MoveScaled(0,34,11.7143,3)
+    Text = ("RA3=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Panel5 Panel
+    MoveScaled(12,34,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Label9 Label
+    MoveScaled(0,37,11.7143,3)
+    Text = ("RA4=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Panel6 Panel
+    MoveScaled(12,37,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Label8 Label
+    MoveScaled(0,40,11.7143,3)
+    Text = ("RA5=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Panel2 Panel
+    MoveScaled(12,25,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Label4 Label
+    MoveScaled(0,28,11.7143,3)
+    Text = ("RA1=GİRİŞ")
+    Alignment = Align.Right
+  }
+  { Panel10 Panel
+    MoveScaled(12,40,3.7143,2.2857)
+    Background = &H0000FF&
+  }
+  { Panel1 Panel
+    MoveScaled(1,52,85,22)
+    Background = Color.Background
+    { Label20 Label
+      MoveScaled(15,1,16,3)
+      Text = ("Label20")
+    }
+    { Label2 Label
+      MoveScaled(2,1,9,3)
+      Text = ("PORTA")
+    }
+    { Label21 Label
+      MoveScaled(15,6,20,3)
+      Text = ("Label21")
+    }
+    { Label3 Label
+      MoveScaled(2,6,11,3)
+      Text = ("PORTB")
+    }
+    { Label52 Label
+      MoveScaled(15,12,17,3)
+      Text = ("Label52")
+    }
+    { Label39 Label
+      MoveScaled(2,12,11.7143,3)
+      Text = ("PORTC")
+    }
+    { Button1 Button
+      MoveScaled(64,9,14,6)
+      Text = ("TAMAM")
+    }
+  }
+}

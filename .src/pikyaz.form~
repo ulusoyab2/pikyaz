@@ -1,0 +1,397 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,92,77)
+  Stacking = Window.Above
+  { dosya Menu
+    Text = ("Dosya")
+    { Menu60 Menu
+      Text = ("Yeni Dosya")
+      Picture = Picture["icon:/22/new"]
+    }
+    { dosyaac Menu
+      Text = ("Dosya Aç")
+      Picture = Picture["icon:/32/open"]
+    }
+    { kaydet Menu
+      Text = ("Kaydet")
+      Picture = Picture["icon:/32/save"]
+    }
+    { fkaydet Menu
+      Text = ("Farklı Kaydet")
+      Picture = Picture["icon:/32/save-as"]
+    }
+    { Menu78 Menu
+      Text = ("Kitaplık Ekleme")
+      Picture = Picture["icon:/32/archive"]
+    }
+  }
+  { Menu79 Menu
+    Text = ("Düzenleme")
+    { Menu80 Menu
+      Text = ("Geri")
+      Picture = Picture["icon:/32/undo"]
+    }
+    { Menu81 Menu
+      Text = ("İleri")
+      Picture = Picture["icon:/32/redo"]
+    }
+    { Menu82 Menu
+      Text = ("Kopyala")
+      Picture = Picture["icon:/32/copy"]
+    }
+    { Menu84 Menu
+      Text = ("Kes")
+      Picture = Picture["icon:/32/cut"]
+    }
+    { Menu83 Menu
+      Text = ("Yapıştır")
+      Picture = Picture["icon:/32/paste"]
+    }
+  }
+  { lib Menu
+    Text = ("Kitaplık")
+    { Menu1 Menu
+    }
+    { Menu2 Menu
+    }
+    { Menu3 Menu
+    }
+    { Menu4 Menu
+    }
+    { Menu5 Menu
+    }
+    { Menu6 Menu
+    }
+    { Menu7 Menu
+    }
+    { Menu8 Menu
+    }
+    { Menu9 Menu
+    }
+    { Menu10 Menu
+    }
+    { Menu11 Menu
+    }
+    { Menu12 Menu
+    }
+    { Menu13 Menu
+    }
+    { Menu14 Menu
+    }
+    { Menu15 Menu
+    }
+    { Menu16 Menu
+    }
+    { Menu17 Menu
+    }
+    { Menu18 Menu
+    }
+    { Menu19 Menu
+    }
+    { Menu20 Menu
+    }
+    { Menu21 Menu
+    }
+    { Menu22 Menu
+    }
+    { Menu23 Menu
+    }
+    { Menu24 Menu
+    }
+    { Menu25 Menu
+    }
+    { Menu26 Menu
+    }
+    { Menu27 Menu
+    }
+    { Menu28 Menu
+    }
+    { Menu29 Menu
+    }
+    { Menu30 Menu
+    }
+  }
+  { islem Menu
+    Text = ("İşlem")
+    { asmyap Menu
+      Text = ("Derle")
+      Picture = Picture["icon:/32/spell-check"]
+    }
+    { hexyap Menu
+      Text = ("Yükle")
+      Picture = Picture["piculakmini.png"]
+    }
+    { sriport Menu
+      Text = ("Seri Port")
+      Picture = Picture["icon:/32/terminal"]
+    }
+  }
+  { Menu31 Menu
+    Text = ("Örnekler")
+    { Menu36 Menu
+      Text = ("Giriş Gıkış işlemleri")
+      { Menu45 Menu
+        Text = ("Led Yakma")
+      }
+      { Menu46 Menu
+        Text = ("pingiris")
+      }
+    }
+    { Menu32 Menu
+      Text = ("LCD")
+      { Menu47 Menu
+        Text = ("Kursor Göster Kapat")
+      }
+      { Menu50 Menu
+        Text = ("Kursor Konum")
+      }
+      { Menu48 Menu
+        Text = ("Yazı Yazma")
+      }
+      { Menu49 Menu
+        Text = ("Değişken Yazma")
+      }
+    }
+    { Menu33 Menu
+      Text = ("İletişim")
+      { Menu51 Menu
+        Text = ("Seri Veri Gönderme")
+      }
+      { Menu52 Menu
+        Text = ("Seri Veri Alma")
+      }
+      { Menu41 Menu
+        Text = ("SPI Veri Gönderme")
+      }
+      { Menu53 Menu
+        Text = ("SPI Veri Alma")
+      }
+    }
+    { Menu34 Menu
+      Text = ("Keypad")
+      { Menu54 Menu
+        Text = ("Tuş Okuma")
+      }
+      { Menu55 Menu
+        Text = ("Sayıya Çevirme")
+      }
+    }
+    { Menu35 Menu
+      Text = ("Döngüler")
+      { Menu56 Menu
+        Text = ("Eger Egerson")
+      }
+      { Menu57 Menu
+        Text = ("For Next")
+      }
+      { Menu58 Menu
+        Text = ("Select / Case")
+      }
+      { Menu72 Menu
+        Text = ("Kara Şimşek")
+      }
+    }
+    { Menu37 Menu
+      Text = ("Eprom")
+      { Menu59 Menu
+        Text = ("Eproma Okuma/Yazma")
+      }
+    }
+    { Menu62 Menu
+      Text = ("Motor")
+      { Menu38 Menu
+        Text = ("Servo Motor")
+      }
+      { Menu39 Menu
+        Text = ("Step Motor")
+      }
+    }
+    { Menu40 Menu
+      Text = ("SD")
+      { Menu61 Menu
+        Text = ("Sd Kart Bağlantı")
+      }
+      { Menu64 Menu
+        Text = ("Dosya Açma")
+      }
+      { Menu65 Menu
+        Text = ("Dosyaya Yazma")
+      }
+      { Menu63 Menu
+        Text = ("Dosya Okuma")
+      }
+    }
+    { Menu42 Menu
+      Text = ("TFT")
+      { Menu66 Menu
+        Text = ("Yazım")
+      }
+      { Menu67 Menu
+        Text = ("Çizim")
+      }
+    }
+    { Menu43 Menu
+      Text = ("Klavye")
+      { Menu68 Menu
+        Text = ("Bağlantı")
+      }
+      { Menu69 Menu
+        Text = ("Harf Okuma")
+      }
+    }
+    { Menu44 Menu
+      Text = ("Ses")
+      { Menu70 Menu
+        Text = ("Uyarı Sesi")
+      }
+      { Menu71 Menu
+        Text = ("Müzik")
+      }
+    }
+  }
+  { Menu73 Menu
+    Text = ("Yardım")
+    { Menu75 Menu
+      Text = ("Pikyaz Komutları")
+      Picture = Picture["icon:/32/view-detail"]
+    }
+    { Menu76 Menu
+      Text = ("Pikyaz Bilgileri.")
+      Picture = Picture["icon:/32/view-detail"]
+    }
+    { Menu77 Menu
+      Text = ("Kitaplık Oluşturma")
+      Picture = Picture["icon:/32/view-detail"]
+    }
+    { Menu74 Menu
+      Text = ("PIC|ulak")
+      Picture = Picture["piculakmini.png"]
+    }
+  }
+  { sag Menu
+    Text = ("sagtik")
+    Visible = False
+    { Menu85 Menu
+      Action = "redo"
+      Text = ("İleri")
+      Picture = Picture["icon:/32/redo"]
+    }
+    { Menu86 Menu
+      Action = "undo"
+      Text = ("Geri Al")
+      Picture = Picture["icon:/32/undo"]
+    }
+    { Menu87 Menu
+      Action = "copy"
+      Text = ("Kopyala")
+      Picture = Picture["icon:/32/copy"]
+    }
+    { Menu89 Menu
+      Text = ("Kes")
+      Picture = Picture["icon:/32/cut"]
+    }
+    { Menu88 Menu
+      Action = "paste"
+      Text = ("Yapıştır")
+      Picture = Picture["icon:/32/paste"]
+    }
+  }
+  { liste3 ListBox
+    MoveScaled(73,31,12,9)
+    Visible = False
+  }
+  { TextArea1 TextArea
+    MoveScaled(0,63,92,10)
+    ScrollBar = Scroll.None
+  }
+  { liste4 ListBox
+    MoveScaled(70,5,21,58)
+  }
+  { Label186 Label
+    MoveScaled(70,0,21,4)
+    Font = Font["Bold,+2"]
+    Background = Color.SelectedBackground
+    Foreground = Color.Background
+    Text = ("KOMUT LİSTE")
+    Alignment = Align.Center
+  }
+  { Button1 Button
+    MoveScaled(5,0,5,5)
+    ToolTip = ("Dosya\nAç")
+    Picture = Picture["icon:/22/open"]
+  }
+  { Button2 Button
+    MoveScaled(10,0,5,5)
+    ToolTip = ("Kaydet")
+    Picture = Picture["icon:/22/save"]
+  }
+  { Button3 Button
+    MoveScaled(15,0,5,5)
+    ToolTip = ("Farklı\nKaydet")
+    Picture = Picture["icon:/22/save-as"]
+  }
+  { Button4 Button
+    MoveScaled(45,0,10,5)
+    ToolTip = ("Derle")
+    Picture = Picture["icon:/22/spell-check"]
+  }
+  { liste1 ListBox
+    MoveScaled(91,6,91,56)
+    Visible = False
+  }
+  { Button6 Button
+    MoveScaled(57,0,9,5)
+    ToolTip = ("Yükle")
+    Picture = Picture["piculakmini.png"]
+  }
+  { liste2 ListBox
+    MoveScaled(90,38,6,10)
+    Visible = False
+  }
+  { TextArea5 Editor
+    MoveScaled(0,5,70,58)
+  }
+  { liste5 ListBox
+    MoveScaled(89,24,6,10)
+    Visible = False
+  }
+  { Button5 Button
+    MoveScaled(0,0,5,5)
+    ToolTip = ("Yeni \nDosya\nAç")
+    Picture = Picture["icon:/22/new"]
+  }
+  { !FileChooser1 FileChooser
+    MoveScaled(91,49,22,19)
+    #Public = True
+    Visible = False
+    Background = Color.Background
+    Filter = [("(*.tar.gz),(*.zip)"), ("sıkıştırılmış dosya")]
+    ShowButton = True
+  }
+}
+
+# Gambas Action File 3.0
+
+{ Actions
+  { Action copy
+    Text = "Kopyala"
+    Shortcut = ""
+    Picture = "icon:/32/copy"
+  }
+  { Action paste
+    Text = "Yapıştır"
+    Shortcut = ""
+    Picture = "icon:/32/paste"
+  }
+  { Action redo
+    Text = "İleri"
+    Shortcut = ""
+    Picture = "icon:/32/redo"
+  }
+  { Action undo
+    Text = "Geri Al"
+    Shortcut = ""
+    Picture = "icon:/32/undo"
+  }
+}

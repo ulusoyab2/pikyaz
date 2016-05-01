@@ -1,0 +1,180 @@
+' Gambas module file
+
+
+Public Sub aciklama(kmt As String)
+With pikyaz
+.TextArea1.Clear
+End With
+If kmt = "lcdbas" Then
+    pikyaz.TextArea1.Text = "Yazılışı : lcdbas değişken" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "lcd ye 1 bayt değişken yazar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: lcdbas Dab"
+Else If kmt = "lcd2bas" Then
+    pikyaz.TextArea1.Text = "Yazılışı : lcd2bas değişken" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "lcd ye 2 bayt değişken yazar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: lcd2bas Dab" 
+Else If kmt = "lcd3bas" Then
+    pikyaz.TextArea1.Text = "Yazılışı : lcd3bas değişken" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "lcd ye 4 bayt değişken yazar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: lcd3bas Dab"
+Else If kmt = "LCDyaz" Then
+    pikyaz.TextArea1.Text = "Yazılışı : LCDyaz karakter" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "lcd ye karakterleri yazar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: LCDyaz abc56" 
+Else If kmt = "lcdkonum" Then
+    pikyaz.TextArea1.Text = "Yazılışı : lcdkonum sayi1,sayi2" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Cursoru syi1 satır sayi2 sutununa götürür" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: lcdkonum 2,8" 
+Else If kmt = "lcdsil" Then
+    pikyaz.TextArea1.Text = "Yazılışı :lcdsil" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "lcd yi siler" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: lcdsil" 
+Else If kmt = "bekle" Then
+    pikyaz.TextArea1.Text = "Yazılışı : bekle sayı" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "sayı kadar milisaniye bekler(sayı < 65535)" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: bekle 500" 
+Else If kmt = "eg" Then
+    pikyaz.TextArea1.Text = "Yazılışı : eg adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "eşitse adrese git" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: eg adres" 
+Else If kmt = "edg" Then
+    pikyaz.TextArea1.Text = "Yazılışı : edg adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "eşitse değilse  adrese git" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: edg adres" 
+Else If kmt = "bg" Then
+    pikyaz.TextArea1.Text = "Yazılışı : bg adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "büyükse adrese git" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: bg adres" 
+Else If kmt = "bdg" Then
+    pikyaz.TextArea1.Text = "Yazılışı : bdg adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "büyük değilse  adrese git" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: bdg adres" 
+Else If kmt = "eger" Then
+    pikyaz.TextArea1.Text = "Yazılışı : eger değişken işaret sayı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "değişkeni sayı ile işarete göre karşılaştırır " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: eger Dab < 10 egerson komutu ile kapatılmalı..." & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "işaretler  >  <  =" 
+Else If kmt = "egerson " Then
+    pikyaz.TextArea1.Text = "Yazılışı : egerson" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "eger ile  açılan döngüyü kapatır" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: egerson" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "eger komutundan sonra kullanılmalı..." 
+Else If kmt = "if" Then
+    pikyaz.TextArea1.Text = "Yazılışı : if değişken işaret sayı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "değişkeni sayı ile işarete göre karşılaştırır " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: if Dab < 10  endif komutu ile kapatılmalı..." & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "işaretler  >  <  ==  ! >= <= != ..."
+Else If kmt = "else " Then
+    pikyaz.TextArea1.Text = "Yazılışı : else  " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "if ile oluşan başka şartı kontrol eder " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: else" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "if komutundan sonra kullanılmalı..."
+Else If kmt = "endif " Then
+    pikyaz.TextArea1.Text = "Yazılışı : endif  " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "if ile  açılan döngüyü kapatır" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: endif" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "if komutundan sonra kullanılmalı..."
+Else If kmt = "for" Then
+    pikyaz.TextArea1.Text = "Yazılışı : for değişken,sayı,sayı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "verilen 2 sayı farkı kadar kodu tekrarlar " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: for Dab,2',10" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "next Dab komutu ile kapatılmalı..." 
+Else If kmt = "next" Then
+    pikyaz.TextArea1.Text = "Yazılışı : next değişken " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "for ile açılan döngüyü kapatır " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: next Dab" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "for komutundan sonra kullanılmalı..." 
+Else If kmt = "forf" Then
+    pikyaz.TextArea1.Text = "Yazılışı : forf değişken,sayı,değişken " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "verilen sayıdan değişkene kadar kodu tekrarlar " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: forf ab,2,Dcb  (nextf Dcb komutu ile kapatılmalı...)"
+Else If kmt = "nextf" Then
+    pikyaz.TextArea1.Text = "Yazılışı : nextf değişken incf " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "forf ile açılan döngüyü kapatır " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: nextf Dab,Dcb  (forf komutundan sonra kullanılmalı...)" 
+Else If kmt = "select" Then
+    pikyaz.TextArea1.Text = "Yazılışı : select " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "select - case - endcase -endselect " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: select  (endselect komutu ile kapatılmalı...)"
+Else If kmt = "endselect" Then
+    pikyaz.TextArea1.Text = "Yazılışı : endselect" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "select - case - endcase -endselect " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: endselect" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "select komutundan sonra kullanılmalı..."
+Else If kmt = "case" Then
+    pikyaz.TextArea1.Text = "Yazılışı : case sayı" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "her case komutundan sonra yeni case açılmadan endcase kullanılmalı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: case 25  (endcase komutu  ile kapatılmalı...)"
+Else If kmt = "casef" Then
+    pikyaz.TextArea1.Text = "Yazılışı : casef deg" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "her casef komutundan sonra yeni casef açılmadan endcase kullanılmalı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: casef Dab  (endcase komutu  ile kapatılmalı...)" 
+Else If kmt = "endcase" Then
+    pikyaz.TextArea1.Text = "Yazılışı : endselect" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "select - case - endcase -endselect " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: endselect (Case komutundan sonra kullan ılmalı...)"
+Else If kmt = "movsd" Then
+    pikyaz.TextArea1.Text = "Yazılışı : movsd sayı,adres" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "sayıyı adrese yükler  örnek: movsd 25,ab" 
+Else If kmt = "artir" Then
+    pikyaz.TextArea1.Text = "Yazılışı : artir değişken " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "4 bayt sayıyı 1 artırır" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: artir Dab"
+Else If kmt = "azalt" Then
+    pikyaz.TextArea1.Text = "Yazılışı : azalt değişken " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "4 bayt sayıyı 1 azaltır   örnek: azalt Dab" 
+Else If kmt = "kucukmu" Then
+    pikyaz.TextArea1.Text = "Yazılışı : kucukmu deg1,deg2,adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "deg1 < deg2 ise adrese git" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: kucukmu Dab,Dcb,adres" 
+Else If kmt = "buyukmu" Then
+    pikyaz.TextArea1.Text = "Yazılışı : buyukmu deg1,deg2,adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "deg1>deg2 ise adrese git " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: buyukmu Dab,Dcb,adres" 
+Else If kmt = "esitmi" Then
+    pikyaz.TextArea1.Text = "Yazılışı : esitmi deg1,deg2,adres " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "deg1=deg2 ise adrese git " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: esitmi Dab,Dcb,adres"
+Else If kmt = "bit168" Then
+    pikyaz.TextArea1.Text = "Yazılışı : bit168 sayı " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "16 bit sayıyı 8 bit ust 8 bit alt ayırır " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: bit168 55847"
+Else If kmt Like "D*" Then
+    pikyaz.TextArea1.Text = "Yazılışı : Deg = Sayı / Deg " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Değişkene sayı veya Değişken atama " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: Dab = 125  veya Dab = Dalt Dab = 125 *45  veya Dab = Dalt/Dac"
+Else If kmt = "Port" Then
+    pikyaz.TextArea1.Text = "Yazılışı : PortXSayı = 1 veya  PortXSayı = 0 " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Çıkış portlarına değer atama  " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek:  Porta2 = 1 veya  Portc6 = 0" 
+Else If kmt = "Testsifir" Then
+    pikyaz.TextArea1.Text = "Yazılışı : Testsifir PortX pinno " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Giriş port pininin sıfır olup olmadığını kontrol eder" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek:  Testsifir  PortB 7 (Testson ile kapatılmalı...)" 
+Else If kmt = "Testson" Then
+    pikyaz.TextArea1.Text = "Yazılışı : Testson " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Test kontrolünü kapatır.  " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: Testson "
+Else If kmt = "epromoku" Then
+    pikyaz.TextArea1.Text = "Yazılışı : epromoku değişken adres" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Epromda Adresteki veriyi okur veriyi değişkene atar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: epromoku Dab 3 = 3 nolu adresteki veriyi Dab ye yazar." 
+    
+Else If kmt = "epromyaz" Then
+    pikyaz.TextArea1.Text = "Yazılışı : epromyaz değişken adres" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Eproma değişkendeki veriyi yazar örnek: epromyaz Dab 3 " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "3 nolu adrese Dab deki veriyi yazar.eproma bir adrese en fazla 255 yazılabilir." 
+Else If kmt = "serioku" Then
+    pikyaz.TextArea1.Text = "Yazılışı : serioku değişken" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Seri Porttan gelen  veriyi okur veriyi değişkene atar" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: serioku Dab  Gelen veriyi Dab ye yazar." 
+Else If kmt = "seriyaz" Then
+    pikyaz.TextArea1.Text = "Yazılışı : seriyaz Sayı" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "Seri porta sayıyı yazar örnek: seriyaz 'A' seri porta A harfini yazar." & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "örnek: seriyaz 125  seri porta 125 değerini yazar. seri porta en fazla 255 yazılabilir."
+Else If kmt = "bip" Then
+    pikyaz.TextArea1.Text = "Yazılışı :bip port pin sure " & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "seçilen port ve pin den bip sesi verir.örnek: bip PORTA 3 100" & Chr$(10)
+    pikyaz.TextArea1.Text = pikyaz.TextArea1.Text & "hoparlörün bir ucu gnd ye diğer ucu seçilen pine bağlı olmalıdır. " 
+Endif
+End

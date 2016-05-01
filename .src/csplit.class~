@@ -1,0 +1,365 @@
+' Gambas class file
+
+
+Public sonuc1 As String
+Public sonuc2 As String
+Public sonuc3 As String
+Public sonuc4 As String
+Public sonuc5 As String
+Public sonuc6 As String
+Public sonuc7 As String
+Public sonuc8 As String
+Public sonuc9 As String
+Public sonuc10 As String
+Public sonuc11 As String
+Public sonuc12 As String
+Public sonuc13 As String
+Public sonuc14 As String
+Public sonuc15 As String
+Public sonuc16 As String
+Public sonuc17 As String
+Public sonuc18 As String
+Public sonuc19 As String
+Public sonuc20 As String
+Public sonuc21 As String
+Public sonuc22 As String
+Public sonuc23 As String
+Public sonuc24 As String
+Public sonuc25 As String
+Public sonuc26 As String
+Public sonuc27 As String
+Public sonuc28 As String
+Public sonuc29 As String
+Public sonuc30 As String
+Public sonuc31 As String
+Public sonuc32 As String
+Public stre As String
+Public yazi As String
+Public m As String[]
+Sub temiz()
+    sonuc1 = ""
+    sonuc2 = ""
+    sonuc3 = ""
+    sonuc4 = ""
+    sonuc5 = ""
+    sonuc6 = ""
+    sonuc7 = ""
+    sonuc8 = ""
+    sonuc9 = ""
+    sonuc10 = ""
+    sonuc11 = ""
+    sonuc12 = ""
+    sonuc13 = ""
+    sonuc14 = ""
+    sonuc15 = ""
+    sonuc16 = ""
+    sonuc17 = ""
+    sonuc18 = ""
+    sonuc19 = ""
+    sonuc20 = ""
+    sonuc21 = ""
+    sonuc22 = ""
+    sonuc23 = ""
+    sonuc24 = ""
+    sonuc25 = ""
+    sonuc26 = ""
+    sonuc27 = ""
+    sonuc28 = ""
+    sonuc29 = ""
+    sonuc30 = ""
+    sonuc31 = ""
+    sonuc32 = ""
+    stre = ""
+End
+
+Public Sub nokta()
+Dim tx As Integer
+temiz
+m = Split(yazi, ".")
+For Each stre In m
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc7 = stre
+    If tx = 10 Then sonuc8 = stre
+Next
+Return
+End
+Public Sub virg()
+Dim tx As Integer
+temiz
+m = Split(yazi, ",", "{")
+For Each stre In m
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc7 = stre
+    If tx = 10 Then sonuc8 = stre
+Next
+Return
+End
+Public Sub bolum()
+Dim tx As Integer
+temiz
+m = Split(yazi, "/")
+For Each stre In m
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+Next
+Return
+End
+Public Sub ikinokta()
+Dim tx As Integer
+temiz
+m = Split(yazi, ":")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+Next
+Return
+End
+Public Sub carpi()
+Dim tx As Integer
+temiz
+m = Split(yazi, "*")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+Next
+Return
+End
+Public Sub arti()
+Dim tx As Integer
+temiz
+m = Split(yazi, "+")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+Next
+Return
+End
+Public Sub mini()
+Dim tx As Integer
+temiz
+m = Split(yazi, "<")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+Next
+Return
+End
+Public Sub eksi()
+Dim tx As Integer
+temiz
+m = Split(yazi, "-")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc9 = stre
+    If tx = 10 Then sonuc10 = stre
+Next
+Return
+End
+Public Sub maksi()
+Dim tx As Integer
+temiz
+m = Split(yazi, ">")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+Next
+Return
+End
+Public Sub esit()
+Dim tx As Integer
+temiz
+m = Split(yazi, "=")
+For Each stre In m
+    tx = tx + 1
+    stre = Trim$(stre)
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+Next
+Return
+End
+Public Sub bul(no As Integer)
+Dim tx As Integer
+temiz
+m = Split(yazi, "\n", "'", True)
+For Each stre In m
+    stre = Trim$(stre)
+    If tx = no Then sonuc1 = stre
+    tx = tx + 1
+Next
+Return
+End
+Public Sub bul2()
+Dim tx As Integer
+temiz
+m = Split(yazi, " ")
+For Each stre In m
+    stre = Trim$(stre)
+    sonuc1 = stre
+    tx = tx + 1
+Next
+Return
+End
+
+Public Sub bos()
+Dim tx As Integer
+temiz
+m = Split(yazi, " \n", "'", True)
+For Each stre In m
+    stre = Trim$(stre)
+    If stre
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc9 = stre
+    If tx = 10 Then sonuc10 = stre
+    Endif
+Next
+Return
+End
+
+Public Sub kucuk()
+Dim tx As Integer
+temiz
+m = Split(yazi, " ")
+For Each stre In m
+    stre = Trim$(stre)
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+Next
+Return
+End
+
+Public Sub noktavirg()
+Dim tx As Integer
+temiz
+m = Split(yazi, ";")
+For Each stre In m
+    stre = Trim$(stre)
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+Next
+Return
+End
+Public Sub para()
+Dim tx As Integer
+temiz
+m = Split(yazi, "(", ")", True)
+For Each stre In m
+    stre = Trim$(stre)
+    Message(stre)
+    tx = tx + 1
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc9 = stre
+    If tx = 10 Then sonuc10 = stre
+    If tx = 11 Then sonuc11 = stre
+Next
+Return
+End
+Public Sub harf()
+Dim tx, i As Integer
+temiz
+For i = 0 To Len(yazi)
+  tx = tx + 1
+stre = Left$(yazi) 
+    If tx = 1 Then sonuc1 = stre
+    If tx = 2 Then sonuc2 = stre
+    If tx = 3 Then sonuc3 = stre
+    If tx = 4 Then sonuc4 = stre
+    If tx = 5 Then sonuc5 = stre
+    If tx = 6 Then sonuc6 = stre
+    If tx = 7 Then sonuc7 = stre
+    If tx = 8 Then sonuc8 = stre
+    If tx = 9 Then sonuc9 = stre
+    If tx = 10 Then sonuc10 = stre
+    If tx = 11 Then sonuc11 = stre
+    If tx = 12 Then sonuc12 = stre
+    If tx = 13 Then sonuc13 = stre
+    If tx = 14 Then sonuc14 = stre
+    If tx = 15 Then sonuc15 = stre
+    If tx = 16 Then sonuc16 = stre
+    If tx = 17 Then sonuc17 = stre
+    If tx = 18 Then sonuc18 = stre
+    If tx = 19 Then sonuc19 = stre
+    If tx = 20 Then sonuc20 = stre
+    If tx = 21 Then sonuc21 = stre
+    If tx = 22 Then sonuc22 = stre
+    If tx = 23 Then sonuc23 = stre
+    If tx = 24 Then sonuc24 = stre
+    If tx = 25 Then sonuc25 = stre
+    If tx = 26 Then sonuc26 = stre
+    If tx = 27 Then sonuc27 = stre
+    If tx = 28 Then sonuc27 = stre
+    If tx = 29 Then sonuc29 = stre
+    If tx = 30 Then sonuc30 = stre
+    If tx = 31 Then sonuc31 = stre
+    If tx = 32 Then sonuc32 = stre
+    yazi = Right$(yazi, -1)
+Next
+Return
+End

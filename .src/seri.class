@@ -1,0 +1,61 @@
+' Gambas class file
+
+Public Sub Form_Close()
+  If Sport.Status = Net.Active Then Close Sport
+End
+
+Public Sub Button1_Click()
+ If Sport.Status = Net.Active Then
+  Close Sport
+  Button1.Text = "Bağlan"
+ Else
+     txtSend.Clear
+  ' Line parameters
+  Sport.PortName = TxtPort.Text
+  Sport.Speed = CmbSpeed.Text
+  Sport.Parity = CmbParity.Index
+  Sport.DataBits = CmbData.Text
+  Sport.StopBits = CmbStop.Text
+  ' keep DTR on
+  Sport.FlowControl = ComboBox1.Index
+  Sport.Open()
+  TextArea1.Text = "Port Opened : " & Sport.PortName & " Settings : " &
+Sport.Speed & "," & Sport.Parity & "," & Sport.DataBits & "," &
+Sport.StopBits & Chr(13) & Chr(10)
+  Button1.Text = "Kapat"
+ Catch
+   Message(Error.text)
+ End If
+End
+Public Sub SPort_Read()
+  Dim s As String
+  Read #Sport, s, Lof(Sport) 
+  TextArea1.Text = TextArea1.Text & s
+Catch
+    Message(Error.text)
+End
+Public Sub Button2_Click()
+  If Sport.Status = Net.Inactive Then
+    Message("Open port first!")
+  Else
+    'WRITE #Sport,TxtSend.Text & Chr(13) & Chr(10), txtSend.Length + 2
+    Print #Sport, txtSend.Text; Chr$(13); Chr$(10);
+  End If
+  Catch
+    Message(Error.text)
+End
+
+Public Sub Form_Open()
+Me.Text = "Seri PORT"
+cmbSpeed.Index = cmbSpeed.Find("57600")
+ComboBox1.Index = 0
+End
+
+
+
+Public Sub TxtSend_Change()
+
+ Print #Sport, Right$(txtSend.Text); Chr$(13); Chr$(10);
+    Catch
+    Message(Error.text)
+End

@@ -1,0 +1,433 @@
+' Gambas class file
+
+Public st As Integer
+Public ra0 As Integer
+Public ra1 As Integer
+Public ra2 As Integer
+Public ra3 As Integer
+Public ra4 As Integer
+Public ra5 As Integer
+Public ra6 As Integer
+Public ra7 As Integer
+
+
+Public rb0 As Integer
+Public rb1 As Integer
+Public rb2 As Integer
+Public rb3 As Integer
+Public rb4 As Integer
+Public rb5 As Integer
+Public rb6 As Integer
+Public rb7 As Integer
+
+Public rc0 As Integer
+Public rc1 As Integer
+Public rc2 As Integer
+Public rc3 As Integer
+Public rc4 As Integer
+Public rc5 As Integer
+Public rc6 As Integer
+Public rc7 As Integer
+
+
+Public Sub Form_Open()
+Me.Center
+Me.Text = "pikyaz - PIC|ULAK  PİN AYARLARI" 
+
+If st = 0
+ra0 = 1
+ra1 = 1
+ra2 = 1
+ra3 = 1
+ra4 = 1
+ra5 = 1
+ra6 = 1
+ra7 = 1
+rb0 = 0
+rb1 = 0
+rb2 = 0
+rb3 = 0
+rb4 = 0
+rb5 = 0
+rb6 = 0
+rb7 = 0
+rc0 = 1
+rc1 = 1
+rc2 = 1
+rc3 = 1
+rc4 = 1
+rc5 = 1
+rc6 = 1
+rc7 = 1
+st = 1
+End If
+panel2_MouseDown()
+Panel3_MouseDown()
+Panel4_MouseDown()
+Panel5_MouseDown()
+Panel6_MouseDown()
+Panel8_MouseDown()
+Panel9_MouseDown()
+Panel10_MouseDown()
+Panel11_MouseDown()
+Panel12_MouseDown()
+Panel13_MouseDown()
+Panel14_MouseDown()
+Panel15_MouseDown()
+Panel17_MouseDown()
+Panel18_MouseDown()
+Panel19_MouseDown()
+Panel35_MouseDown()
+Panel36_MouseDown()
+Panel37_MouseDown()
+Panel38_MouseDown()
+Panel39_MouseDown()
+Panel40_MouseDown()
+Panel41_MouseDown()
+Panel42_MouseDown()
+gos
+End
+Sub gos()
+  Label20.Text = ra0 & ra1 & ra2 & ra3 & ra4 & ra5 & ra6 & ra7
+  Label21.Text = rb0 & rb1 & rb2 & rb3 & rb4 & rb5 & rb6 & rb7
+  Label52.Text = rc0 & rc1 & rc2 & rc3 & rc4 & rc5 & rc6 & rc7
+End
+
+Public Sub Panel2_MouseDown()
+If Panel2.Background = Color.Blue
+  Panel2.Background = Color.Red
+  label5.Text = "RA0=ÇIKIŞ"
+  ra0 = 0
+Else
+   Panel2.Background = Color.Blue
+   label5.Text = "RA0=GİRİŞ"
+   ra0 = 1
+End If
+gos
+End
+
+Public Sub Panel3_MouseDown()
+If Panel3.Background = Color.Blue
+  Panel3.Background = Color.Red
+  label4.Text = "RA1=ÇIKIŞ"
+  ra1 = 0
+Else
+   Panel3.Background = Color.Blue
+   label4.Text = "RA1=GİRİŞ"
+   ra1 = 1
+End If
+gos
+End
+
+Public Sub Panel4_MouseDown()
+If Panel4.Background = Color.Blue
+  Panel4.Background = Color.Red
+  label7.Text = "RA2=ÇIKIŞ"
+  ra2 = 0
+Else
+   Panel4.Background = Color.Blue
+   label7.Text = "RA2=GİRİŞ"
+   ra2 = 1
+End If
+gos
+End
+
+Public Sub Panel5_MouseDown()
+If Panel5.Background = Color.Blue
+  Panel5.Background = Color.Red
+  label6.Text = "RA3=ÇIKIŞ"
+  ra3 = 0
+Else
+   Panel5.Background = Color.Blue
+   label6.Text = "RA3=GİRİŞ"
+   ra3 = 1
+End If
+gos
+End
+
+Public Sub Panel6_MouseDown()
+If Panel6.Background = Color.Blue
+  Panel6.Background = Color.Red
+  label9.Text = "RA4=ÇIKIŞ"
+  ra4 = 0
+Else
+   Panel6.Background = Color.Blue
+   label9.Text = "RA4=GİRİŞ"
+   ra4 = 1
+End If
+gos
+End
+
+Public Sub Panel10_MouseDown()
+If Panel10.Background = Color.Blue
+  Panel10.Background = Color.Red
+  label8.Text = "RA5=ÇIKIŞ"
+  ra5 = 0
+Else
+   Panel10.Background = Color.Blue
+   label8.Text = "RA5=GİRİŞ"
+   ra5 = 1
+End If
+  gos
+
+End
+
+Public Sub Panel9_MouseDown()
+If Panel9.Background = Color.Blue
+  Panel9.Background = Color.Red
+  label11.Text = "RA6=ÇIKIŞ"
+  ra6 = 0
+Else
+   Panel9.Background = Color.Blue
+   label11.Text = "RA6=GİRİŞ"
+   ra6 = 1
+End If
+gos
+End
+
+Public Sub Panel8_MouseDown()
+If Panel8.Background = Color.Blue
+  Panel8.Background = Color.Red
+  label10.Text = "RA7=ÇIKIŞ"
+  ra7 = 0
+Else
+   Panel8.Background = Color.Blue
+   label10.Text = "RA7=GİRİŞ"
+   ra7 = 1
+End If
+  gos
+
+End
+
+
+Public Sub Panel11_MouseDown()
+If Panel11.Background = Color.Blue
+  Panel11.Background = Color.Red
+  label12.Text = "RB0=ÇIKIŞ"
+  rb0 = 0
+Else
+   Panel11.Background = Color.Blue
+   label12.Text = "RB0=GİRİŞ"
+   rb0 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel12_MouseDown()
+If Panel12.Background = Color.Blue
+  Panel12.Background = Color.Red
+  label13.Text = "RB1=ÇIKIŞ"
+  rb1 = 0
+Else
+   Panel12.Background = Color.Blue
+   label13.Text = "RB1=GİRİŞ"
+   rb1 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel13_MouseDown()
+If Panel13.Background = Color.Blue
+  Panel13.Background = Color.Red
+  label14.Text = "RB2=ÇIKIŞ"
+  rb2 = 0
+Else
+   Panel13.Background = Color.Blue
+   label14.Text = "RB2=GİRİŞ"
+   rb2 = 1
+End If
+gos
+End
+
+Public Sub Panel14_MouseDown()
+If Panel14.Background = Color.Blue
+  Panel14.Background = Color.Red
+  label15.Text = "RB3=ÇIKIŞ"
+  rb3 = 0
+Else
+   Panel14.Background = Color.Blue
+   label15.Text = "RB3=GİRİŞ"
+   rb3 = 1
+End If
+gos
+End
+
+Public Sub Panel15_MouseDown()
+If Panel15.Background = Color.Blue
+  Panel15.Background = Color.Red
+  label16.Text = "RB4=ÇIKIŞ"
+  rb4 = 0
+Else
+   Panel15.Background = Color.Blue
+   label16.Text = "RB4=GİRİŞ"
+   rb4 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel19_MouseDown()
+If Panel19.Background = Color.Blue
+  Panel19.Background = Color.Red
+  label17.Text = "RB5=ÇIKIŞ"
+  rb5 = 0
+Else
+   Panel19.Background = Color.Blue
+   label17.Text = "RB5=GİRİŞ"
+   rb5 = 1
+End If
+gos
+End
+Public Sub Panel18_MouseDown()
+If Panel18.Background = Color.Blue
+  Panel18.Background = Color.Red
+  label18.Text = "RB6=ÇIKIŞ"
+  rb6 = 0
+Else
+   Panel18.Background = Color.Blue
+   label18.Text = "RB6=GİRİŞ"
+   rb6 = 1
+End If
+gos
+End
+
+Public Sub Panel17_MouseDown()
+If Panel17.Background = Color.Blue
+  Panel17.Background = Color.Red
+  label19.Text = "RB7=ÇIKIŞ"
+  rb7 = 0
+Else
+   Panel17.Background = Color.Blue
+   label19.Text = "RB7=GİRİŞ"
+   rb7 = 1
+End If
+gos
+End
+
+
+
+
+Public Sub Panel35_MouseDown()
+If rc0 = 1
+  Panel35.Background = Color.Red
+  label41.Text = "RC0=ÇIKIŞ"
+  rc0 = 0
+Else
+   Panel35.Background = Color.Blue
+   label41.Text = "RC0=GİRİŞ"
+   rc0 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel36_MouseDown()
+If rc1 = 1
+  Panel36.Background = Color.Red
+  label40.Text = "RC1=ÇIKIŞ"
+  rc1 = 0
+Else
+   Panel36.Background = Color.Blue
+   label40.Text = "RC1=GİRİŞ"
+   rc1 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel37_MouseDown()
+If rc2 = 1
+  Panel37.Background = Color.Red
+  label43.Text = "RC2=ÇIKIŞ"
+  rc2 = 0
+Else
+   Panel37.Background = Color.Blue
+   label43.Text = "RC2=GİRİŞ"
+   rc2 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel38_MouseDown()
+If rc3 = 1
+  Panel38.Background = Color.Red
+  label42.Text = "RC3=ÇIKIŞ"
+  rc3 = 0
+Else
+   Panel38.Background = Color.Blue
+   label42.Text = "RC3=GİRİŞ"
+   rc3 = 1
+End If
+  
+  
+gos
+End
+
+Public Sub Panel39_MouseDown()
+If rc4 = 1
+  Panel39.Background = Color.Red
+  label45.Text = "RC4=ÇIKIŞ"
+  rc4 = 0
+Else
+   Panel39.Background = Color.Blue
+   label45.Text = "RC4=GİRİŞ"
+   rc4 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel42_MouseDown()
+If rc5 = 1
+  Panel42.Background = Color.Red
+  label44.Text = "RC5=ÇIKIŞ"
+  rc5 = 0
+Else
+   Panel42.Background = Color.Blue
+   label44.Text = "RC5=GİRİŞ"
+   rc5 = 1
+End If
+  
+gos
+End
+
+Public Sub Panel41_MouseDown()
+If rc6 = 1
+  Panel41.Background = Color.Red
+  label47.Text = "RC6=ÇIKIŞ"
+  rc6 = 0
+Else
+   Panel41.Background = Color.Blue
+   label47.Text = "RC6=GİRİŞ"
+   rc6 = 1
+End If
+  
+gos
+End
+
+
+Public Sub Panel40_MouseDown()
+If rc7 = 1
+  Panel40.Background = Color.Red
+  label46.Text = "RC7=ÇIKIŞ"
+  rc7 = 0
+Else
+   Panel40.Background = Color.Blue
+   label46.Text = "RC7=GİRİŞ"
+   rc7 = 1
+End If
+gos
+End
+
+Public Sub Button1_Click()
+  Me.Hide
+End
+
+Public Sub PictureBox1_MouseDown()
+
+  
+
+End

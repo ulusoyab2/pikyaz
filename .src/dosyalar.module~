@@ -1,0 +1,114 @@
+' Gambas module file
+
+Public Sub yukle()
+Dim adosya, myFile As File
+Dim myLine As String
+
+If Not IsDir(System.User.Home &/ "Pikyaz") Then Mkdir System.User.Home &/ "Pikyaz"
+If Not IsDir(System.User.Home &/ "Pikyaz/ktp") Then Mkdir System.User.Home &/ "Pikyaz/ktp"
+If Not IsDir(System.User.Home &/ "Pikyaz/ktp/lcd") Then Mkdir System.User.Home &/ "Pikyaz/ktp/lcd"
+If Not IsDir(System.User.Home &/ "Pikyaz/der") Then Mkdir System.User.Home &/ "Pikyaz/der"
+If Not IsDir(System.User.Home &/ "Pikyaz/der/ortak") Then Mkdir System.User.Home &/ "Pikyaz/der/ortak"
+If Not IsDir(System.User.Home &/ "Pikyaz/mcrs") Then Mkdir System.User.Home &/ "Pikyaz/mcrs"
+If Not IsDir(System.User.Home &/ "Pikyaz/mcrsy") Then Mkdir System.User.Home &/ "Pikyaz/mcrsy"
+
+Shell "rm " & System.User.Home &/ "Pikyaz/mcrs/*"
+Shell "rm " & System.User.Home &/ "Pikyaz/mcrsy/*"
+
+If Not Exist(System.User.Home &/ "Pikyaz/der/ortak/makrolar.asm") Then 
+     myFile = Open System.User.Home &/ "Pikyaz/der/ortak/makrolar.asm" For Create 
+         adosya = Open "makrolar" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+
+If Not Exist(System.User.Home &/ "Pikyaz/der/ortak/pin") Then 
+    myFile = Open System.User.Home &/ "Pikyaz/der/ortak/pin" For Create 
+         adosya = Open "ortakpin" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+If Not Exist(System.User.Home &/ "Pikyaz/der/ortak/komut") Then 
+    myFile = Open System.User.Home &/ "Pikyaz/der/ortak/komut" For Create 
+         adosya = Open "ortakkomut" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+
+If Not Exist(System.User.Home &/ "Pikyaz/ktp/lcd/makro.asm") Then 
+     myFile = Open System.User.Home &/ "Pikyaz/ktp/lcd/makro.asm" For Create 
+         adosya = Open "Mlcd" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+If Not Exist(System.User.Home &/ "Pikyaz/ktp/lcd/pin") Then 
+     myFile = Open System.User.Home &/ "Pikyaz/ktp/lcd/pin" For Create 
+         adosya = Open "Plcd" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+If Not Exist(System.User.Home &/ "Pikyaz/ktp/lcd/komut") Then 
+     myFile = Open System.User.Home &/ "Pikyaz/ktp/lcd/komut" For Create 
+         adosya = Open "Klcd" For Read
+            While Not Eof(adosya)
+              Line Input #adosya, myLine
+              If myLine Then
+              If myLine Like ";*" Then
+              Else
+                  Print #myFile, myLine
+              Endif
+              Endif
+            Wend
+            Close #adosya
+    Close #myFile
+Endif
+Wait 1.0
+Return
+End
+
+
