@@ -1,0 +1,15 @@
+         ;// Picyaz PİC  Programlama  //
+        
+ kod ayar(){        ; ayarlama bölümü 
+          TRISC.0=0           ; C0 çıkış
+          TRISC.2=1           ; C2 giriş
+          TRISB.4=0           ; C4 çıkış
+   }
+kod bas(){          ; kodlar burada yazılacak...
+          Testsifir Portc 2     ; c2 0 mı?
+          portc.0 = 1        ; C4 çıkışına 5v verildi.
+          bekle 20000       ; 2 saniye bekle 
+          testson
+          portc.0 = 0
+          bekle 100
+  }

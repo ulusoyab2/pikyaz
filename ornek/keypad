@@ -1,0 +1,41 @@
+ekle lcd
+  ; pinlcd(lcdport,d7,d6,d5,d4,e,rs)   ; pin isimleri
+ekle keypad
+  ; pinkeypad(keyport,y1,y2,y3,y4,x1,x2,x3,x4)   ; pin isimleri
+;// Pikyaz PİC  Programlama  //
+  pinlcd(LATA,3,2,1,0,4,5) 
+ pinkeypad(LATB,PORTB,0,1,2,3,4,5,6,7) 
+ Deg ab
+ kod ayar(){
+          ab = 18
+          lcdgiris           ; lcd başlatma komutları
+          bekle 1000
+   }
+kod bas(){
+  lcdsil
+       keyp ab
+         lcdkonum  2,0
+         lcdbas ab
+         lcdkonum  1,0
+      select ab
+        case 1
+          lcdyaz 1
+        endcase
+        case 2
+          lcdyaz 2
+        endcase
+        case 3
+          lcdyaz 3
+        endcase
+        case 4
+          lcdyaz 4
+        endcase
+        case 5
+          lcdyaz 5
+        endcase
+        case 6
+          lcdyaz 6
+        endcase
+      endselect
+      bekle 2000
+  }

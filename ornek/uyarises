@@ -1,0 +1,8 @@
+
+                        ;// Picyaz PİC  Programlama  //
+ kod ayar(){            ; ayarlama bölümü 
+        TRISC.0=0           ; C0 çıkış
+   }
+kod bas(){
+        bip portc 0 100 ; 100 ms. c0 portunda bip sesi çıkarır.
+  }

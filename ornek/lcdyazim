@@ -1,0 +1,26 @@
+ekle lcd
+                    ; pinlcd(lcdport,d7,d6,d5,d4,e,rs)   ; pin isimleri
+                    ;// Picyaz PİC  Programlama  //
+   pinlcd(LATA,3,2,1,0,4,5) 
+                    ; PORTA 5.pin RS, 4.pin Enable,
+                    ; 0. pin data4, 1.pin data5,2. pin data4, 3.pin data5  e bağlanıyor..
+ kod ayar(){        ; ayarlama bölümü 
+          lcdgiris           ; lcd başlatma komutları
+          bekle 1000
+   }
+kod bas(){          ; kodlar burada yazılacak...
+        lcdsil            ; lcdyi temizle..
+        lcdkonum 1,0
+        lcdyaz A
+        bekle 8000       ; 1 saniye bekle 
+        lcdkonum 1,10
+        lcdyaz BCD
+        bekle 8000       ; 1 saniye bekle
+        lcdkonum 2,0
+        lcdyaz E
+        bekle 8000       ; 1 saniye bekle 
+        lcdkonum 2,10
+        lcdyaz FGH
+        bekle 8000       ; 1 saniye bekle
+  }
+  

@@ -1,0 +1,11 @@
+
+                    ;// Picyaz PİC  Programlama  //
+ kod ayar(){        ; ayarlama bölümü 
+        TRISC.0=0           ; C0 çıkış
+   }
+kod bas(){          ; kodlar burada yazılacak...
+        portc.0=1         ; C0 çıkışına 5v verildi.
+        bekle 10000       ; 1 saniye bekle 
+        portc.0=0         ; c0 çıkışı 0 volt.
+        bekle 10000       ; 1 saniye bekle 
+  }

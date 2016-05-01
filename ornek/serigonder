@@ -1,0 +1,39 @@
+ekle lcd
+ekle seri
+                    ;// Picyaz PİC  Programlama  //
+   pinlcd(LATA,3,2,1,0,4,5) 
+   pinseri(PORTC,7,6)
+                    ; PORTC 7.pin RX, 6.pin TX 
+  DEG  ab          ; ab Değişkeni tanımlandı.
+ kod ayar(){        ; ayarlama bölümü 
+         ab = 0         ; ab değişkeni 0 değeri verildi.
+        lcdgiris           ; lcd başlatma komutları
+   }
+kod bas(){          ; kodlar burada yazılacak...
+  lcdsil            ; lcdyi temizle..
+        serioku ab          ; seri portu oku veriyi ab değişkenine yaz.
+        bekle 500           ; 50 ms bekle
+        select ab           ; ab yi seç
+          case 'A'            ; ab=A ise
+            seriyaz pikYaz   ;Seri porta  pikyaz yaz.
+            bekle 200
+          endcase           ; durum sonu
+          case 'B'            ; ab = 4 se 
+            seriyaz seri   ; Seri porta seri yaz
+            bekle 200
+          endcase           ; durum sonu
+          case 'C'           ; ab = 5 se
+            seriyaz ornegi   ; Seri porta  ornegi yaz.
+            bekle 200
+          endcase           ; durum sonu
+          case 'D'           ; ab = 5 se
+            seriyaz D basildi   ; Seri porta D basildi yaz.
+            bekle 200
+          endcase           ; durum sonu
+        endselect  
+        
+        eger ab>30        ; ab>30 ise(bknz. ascı tablo)
+          lcdbas ab       ; ab değişkeni lcdye yazıldı.
+        egerson           ; eğer bitti
+        bekle 1500        ; 150 ms. bekle
+  }
