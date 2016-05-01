@@ -1,0 +1,25 @@
+# Gambas Action File 3.0
+
+{ Actions
+  { Action copy
+    Text = "Kopyala"
+    Shortcut = ""
+    Picture = "icon:/32/copy"
+  }
+  { Action paste
+    Text = "Yapıştır"
+    Shortcut = ""
+    Picture = "icon:/32/paste"
+  }
+  { Action redo
+    Text = "İleri"
+    Shortcut = ""
+    Picture = "icon:/32/redo"
+  }
+  { Action undo
+    Text = "Geri Al"
+    Shortcut = ""
+    Picture = "icon:/32/undo"
+  }
+}
+
