@@ -1,0 +1,398 @@
+
+cikarma
+  call  negateb    ;Negate REGB
+  skpnc
+  return      ;Overflow
+toplama  movf  REGA3,w    ;Compare signs
+  xorwf  REGB3,w
+  movwf  MTEMP
+
+  call  addba    ;Add REGB to REGA
+
+  clrc      ;Check signs
+  movf  REGB3,w    ;If signs are same
+  xorwf  REGA3,w    ;so must result sign
+  btfss  MTEMP,7    ;else overflow
+  addlw  0x80
+  return
+
+carpma
+  clrf  MTEMP    ;Reset sign flag
+  call  absa    ;Make REGA positive
+  skpc
+  call  absb    ;Make REGB positive
+  skpnc
+  return      ;Overflow
+
+  call  movac    ;Move REGA to REGC
+  call  clrrega    ;Clear product
+
+  movlw  D'31'    ;Loop counter
+  movwf  MCOUNT
+
+muloop  call  slac    ;Shift left product and multiplicand
+  
+  rlcf  REGC3,w    ;Test MSB of multiplicand
+  skpnc      ;If multiplicand bit is a 1 then
+  call  addba    ;add multiplier to product
+
+  skpc      ;Check for overflow
+  rlcf  REGA3,w
+  skpnc
+  return
+
+  decfsz  MCOUNT,f  ;Next
+  goto  muloop
+
+  btfsc  MTEMP,0    ;Check result sign
+  call  negatea    ;Negative
+  return
+
+
+bolme  clrf  MTEMP    ;Reset sign flag
+  movf  REGB0,w    ;Trap division by zero
+  iorwf  REGB1,w
+  iorwf  REGB2,w
+  iorwf  REGB3,w
+  sublw  0
+  skpc
+  call  absa    ;Make dividend (REGA) positive
+  skpc
+  call  absb    ;Make divisor (REGB) positive
+  skpnc
+  return      ;Overflow
+
+  clrf  REGC0    ;Clear remainder
+  clrf  REGC1
+  clrf  REGC2
+  clrf  REGC3
+  call  slac    ;Purge sign bit
+
+  movlw  D'31'    ;Loop counter
+  movwf  MCOUNT
+
+dvloop  call  slac    ;Shift dividend (REGA) msb into remainder (REGC)
+
+  movf  REGB3,w    ;Test if remainder (REGC) >= divisor (REGB)
+  subwf  REGC3,w
+  skpz
+  goto  dtstgt
+  movf  REGB2,w
+  subwf  REGC2,w
+  skpz
+  goto  dtstgt
+  movf  REGB1,w
+  subwf  REGC1,w
+  skpz
+  goto  dtstgt
+  movf  REGB0,w
+  subwf  REGC0,w
+dtstgt  skpc      ;Carry set if remainder >= divisor
+  goto  dremlt
+
+  movf  REGB0,w    ;Subtract divisor (REGB) from remainder (REGC)
+  subwf  REGC0,f
+  movf  REGB1,w
+  skpc
+  incfsz  REGB1,w
+  subwf  REGC1,f
+  movf  REGB2,w
+  skpc
+  incfsz  REGB2,w
+  subwf  REGC2,f
+  movf  REGB3,w
+  skpc
+  incfsz  REGB3,w
+  subwf  REGC3,f
+  clrc
+  bsf  REGA0,0    ;Set quotient bit
+
+dremlt  decfsz  MCOUNT,f  ;Next
+  goto  dvloop
+
+  btfsc  MTEMP,0    ;Check result sign
+  call  negatea    ;Negative
+  return
+
+
+round  clrf  MTEMP    ;Reset sign flag
+  call  absa    ;Make positive
+  clrc
+  call  slc    ;Multiply remainder by 2
+  movf  REGB3,w    ;Test if remainder (REGC) >= divisor (REGB)
+  subwf  REGC3,w
+  skpz
+  goto  rtstgt
+  movf  REGB2,w
+  subwf  REGC2,w
+  skpz
+  goto  dtstgt
+  movf  REGB1,w
+  subwf  REGC1,w
+  skpz
+  goto  rtstgt
+  movf  REGB0,w
+  subwf  REGC0,w
+rtstgt  skpc      ;Carry set if remainder >= divisor
+  goto  rremlt
+  incfsz  REGA0,f    ;Add 1 to quotient
+  goto  rremlt
+  incfsz  REGA1,f
+  goto  rremlt
+  incfsz  REGA2,f
+  goto  rremlt
+  incf  REGA3,f
+  skpnz
+  return      ;Overflow,return carry set
+rremlt  btfsc  MTEMP,0    ;Restore sign
+  call  negatea
+  return
+
+
+sqrt  rlcf  REGA3,w    ;Trap negative values
+  skpnc
+  return
+
+  call  movac    ;Move REGA to REGC
+  call  clrregb    ;Clear remainder (REGB) and root (REGA)
+
+  movlw  D'16'    ;Loop counter
+  movwf  MCOUNT
+
+sqloop  rlcf  REGC0,f    ;Shift two msb's
+  rlcf  REGC1,f    ;into remainder
+  rlcf  REGC2,f
+  rlcf  REGC3,f
+  rlcf  REGB0,f
+  rlcf  REGB1,f
+  rlcf  REGB2,f
+  rlcf  REGC0,f
+  rlcf  REGC1,f
+  rlcf  REGC2,f
+  rlcf  REGC3,f
+  rlcf  REGB0,f
+  rlcf  REGB1,f
+  rlcf  REGB2,f
+
+  setc      ;Add 1 to root
+  rlcf  REGA0,f    ;Align root
+  rlcf  REGA1,f
+  rlcf  REGA2,f
+
+  movf  REGA2,w    ;Test if remdr (REGB) >= root (REGA)
+  subwf  REGB2,w
+  skpz
+  goto  ststgt
+  movf  REGA1,w
+  subwf  REGB1,w
+  skpz
+  goto  ststgt
+  movf  REGA0,w
+  subwf  REGB0,w
+ststgt  skpc      ;Carry set if remdr >= root
+  goto  sremlt
+
+  movf  REGA0,w    ;Subtract root (REGA) from remdr (REGB)
+  subwf  REGB0,f
+  movf  REGA1,w
+  skpc
+  incfsz  REGA1,w
+  subwf  REGB1,f
+  movf  REGA2,w
+  skpc
+  incfsz  REGA2,w
+  subwf  REGB2,f
+  bsf  REGA0,1    ;Set current root bit
+
+sremlt  bcf  REGA0,0    ;Clear test bit
+  decfsz  MCOUNT,f  ;Next
+  goto  sqloop
+
+  clrc
+  rrcf  REGA2,f    ;Adjust root alignment
+  rrcf  REGA1,f
+  rrcf  REGA0,f
+  return
+
+
+addba  movf  REGB0,w    ;Add lo byte
+  addwf  REGA0,f
+
+  movf  REGB1,w    ;Add mid-lo byte
+  skpnc      ;No carry_in, so just add
+  incfsz  REGB1,w    ;Add carry_in to REGB
+  addwf  REGA1,f    ;Add and propagate carry_out
+
+  movf  REGB2,w    ;Add mid-hi byte
+  skpnc
+  incfsz  REGB2,w
+  addwf  REGA2,f
+
+  movf  REGB3,w    ;Add hi byte
+  skpnc
+  incfsz  REGB3,w
+  addwf  REGA3,f
+  return
+
+
+movac
+  movf  REGA0,w
+  movwf  REGC0
+  movf  REGA1,w
+  movwf  REGC1
+  movf  REGA2,w
+  movwf  REGC2
+  movf  REGA3,w
+  movwf  REGC3
+  return
+
+movab
+  movf  REGA0,w
+  movwf  REGB0
+  movf  REGA1,w
+  movwf  REGB1
+  movf  REGA2,w
+  movwf  REGB2
+  movf  REGA3,w
+  movwf  REGB3
+  return
+  
+movba
+  movf REGB0  ; B=>A
+  movwf REGA0
+  movf REGB1
+  movwf REGA1
+  movf REGB2
+  movwf REGA2
+  movf REGB3
+  movwf REGA3
+  
+
+clrregb
+  clrf  REGB0
+  clrf  REGB1
+  clrf  REGB2
+  clrf  REGB3
+  return
+
+clrrega
+  clrf  REGA0
+  clrf  REGA1
+  clrf  REGA2
+  clrf  REGA3
+  return
+
+
+absa  rlcf  REGA3,w
+  skpc
+  return      ;Positive
+
+negatea
+  movf  REGA3,w    ;Save sign in w
+  andlw  0x80
+
+  comf  REGA0,f    ;2's complement
+  comf  REGA1,f
+  comf  REGA2,f
+  comf  REGA3,f
+  incfsz  REGA0,f
+  goto  nega1
+  incfsz  REGA1,f
+  goto  nega1
+  incfsz  REGA2,f
+  goto  nega1
+  incf  REGA3,f
+nega1
+  incf  MTEMP,f    ;flip sign flag
+  addwf  REGA3,w    ;Return carry set if -2147483648
+  return
+
+absb
+  rlcf  REGB3,w
+  skpc
+  return      ;Positive
+
+__degis
+  CALL movac  ; A=>C
+  call movba   ; B=>A
+  movf REGC0  ; C=>B
+  movwf REGB0
+  movf REGC1
+  movwf REGB1
+  movf REGC2
+  movwf REGB2
+  movf REGC3
+  movwf REGB3
+  return
+  
+negateb
+  movf  REGB3,w    ;Save sign in w
+  andlw  0x80
+
+  comf  REGB0,f    ;2's complement
+  comf  REGB1,f
+  comf  REGB2,f
+  comf  REGB3,f
+  incfsz  REGB0,f
+  goto  negb1
+  incfsz  REGB1,f
+  goto  negb1
+  incfsz  REGB2,f
+  goto  negb1
+  incf  REGB3,f
+negb1
+  incf  MTEMP,f    ;flip sign flag
+  addwf  REGB3,w    ;Return carry set if -2147483648
+  return
+
+
+slac  rlcf  REGA0,f
+  rlcf  REGA1,f
+  rlcf  REGA2,f
+  rlcf  REGA3,f
+slc  rlcf  REGC0,f
+  rlcf  REGC1,f
+  rlcf  REGC2,f
+  rlcf  REGC3,f
+  return
+
+
+clrdig
+    clrf  DSIGN
+    clrf  DIGIT1
+    clrf  DIGIT2
+    clrf  DIGIT3
+    clrf  DIGIT4
+    clrf  DIGIT5
+    clrf  DIGIT6
+    clrf  DIGIT7
+    clrf  DIGIT8
+    clrf  DIGIT9
+    clrf  DIGIT10
+    clrf REGB3
+    clrf REGB2
+    clrf REGB1
+    clrf REGB0
+    clrf key
+    clrf  bey
+    clrf  OUT
+    clrf  dgdeg
+    return
+Key_Table    ADDWF   PCL       , f
+              RETLW   0x43
+              RETLW   0x42
+              RETLW   0x30
+              RETLW   0x41
+              RETLW   0x44
+              RETLW   0x39
+              RETLW   0x38
+              RETLW   0x37
+              RETLW   0x45
+              RETLW   0x36
+              RETLW   0x35
+              RETLW   0x34
+              RETLW   0x46
+              RETLW   0x33
+              RETLW   0x32
+              RETLW   0x31
+              

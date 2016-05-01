@@ -1,0 +1,10 @@
+pinlcd(lcdport,d7,d6,d5,d4,e,rs)   ; pin isimleri
+d7 c
+d6 c
+d5 c
+d4 c
+e c
+rs c
+/
+
+LCDTemp

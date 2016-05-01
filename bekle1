@@ -1,0 +1,183 @@
+_bekle05
+        MOVLW  d'1'
+        MOVWF  __i
+_DONGU24
+        MOVLW  d'1'
+        MOVWF  __j
+_DONGU25
+        DECFSZ  __j,F
+        GOTO  _DONGU25
+        DECFSZ  __i,F
+        GOTO  _DONGU24
+        RETURN
+    
+_bekle010 
+        MOVLW  d'1'
+        MOVWF  __i
+_DONGU7
+        MOVLW  d'7'
+        MOVWF  __j
+_DONGU8
+        DECFSZ  __j,F
+        GOTO  _DONGU8
+        DECFSZ  __i,F
+        GOTO  _DONGU7
+        RETURN
+
+_bekle050
+        MOVLW  d'25'
+        MOVWF  __i
+_DONGU5
+        MOVLW  d'250'
+        MOVWF  __j
+_DONGU6
+        DECFSZ  __j,F
+        GOTO  _DONGU6
+        DECFSZ  __i,F
+        GOTO  _DONGU5
+        RETURN
+
+_bekle0100
+        MOVLW  d'1'
+        MOVWF  __i
+_DONGU9
+        MOVLW  d'50'
+        MOVWF  __j
+_DONGU10
+        DECFSZ  __j,F
+        GOTO  _DONGU10
+        DECFSZ  __i,F
+        GOTO  _DONGU9
+        RETURN
+
+_bekle0200
+        MOVLW  d'5'
+        MOVWF  __k
+_DONGU13
+        MOVLW  d'150'
+        MOVWF  __i
+_DONGU14
+        MOVLW  d'150'
+        MOVWF  __j
+_DONGU15
+        DECFSZ  __j,F
+        GOTO  _DONGU15
+        DECFSZ  __i,F
+        GOTO  _DONGU14
+        DECFSZ  __k,F
+        GOTO   _DONGU13
+        RETURN
+
+_bekle500
+        MOVLW  d'5'
+        MOVWF  __k
+_DONGU16
+        MOVLW  d'250'
+        MOVWF  __i
+_DONGU17
+        MOVLW  d'250'
+        MOVWF  __j
+_DONGU18
+        DECFSZ  __j,F
+        GOTO  _DONGU18
+        DECFSZ  __i,F
+        GOTO  _DONGU17
+        DECFSZ  __k,F
+        GOTO   _DONGU16
+        RETURN
+_bekle1
+        MOVLW  d'50'
+        MOVWF  __k
+_DONGU1
+        MOVLW  d'150'
+        MOVWF  __i
+_DONGU2
+        MOVLW  d'250'
+        MOVWF  __j
+_DONGU55
+        DECFSZ  __j,F
+        GOTO  _DONGU55
+        DECFSZ  __i,F
+        GOTO  _DONGU2
+        DECFSZ  __k,F
+        GOTO   _DONGU1
+        RETURN
+
+_bekle2
+        MOVLW  d'150'
+        MOVWF  __k
+_DONGU3
+        MOVLW  d'200'
+        MOVWF  __i
+_DONGU4
+        MOVLW  d'250'
+        MOVWF  __j
+_DONGU56
+        DECFSZ  __j,F
+        GOTO  _DONGU56
+        DECFSZ  __i,F
+        GOTO  _DONGU4
+        DECFSZ  __k,F
+        GOTO   _DONGU3
+        RETURN
+_bekle5
+        MOVLW  d'250'
+        MOVWF  __k
+_DONGU19
+        MOVLW  d'250'
+        MOVWF  __i
+_DONGU20
+        MOVLW  d'250'
+        MOVWF  __j
+_DONGU21
+        DECFSZ  __j,F
+        GOTO  _DONGU21
+        DECFSZ  __i,F
+        GOTO  _DONGU20
+        DECFSZ  __k,F
+        GOTO   _DONGU19
+        RETURN
+        
+        
+
+        
+; Delay routines...
+D160us 
+    clrf count1
+    bsf count1, 5
+    bsf count1, 4
+    decfsz count1, f
+    goto $ - 1
+    return
+
+Del255 movlw 0xff
+    goto d0 ;
+Del200 movlw d'200'
+    goto d0 ;
+Del100 movlw d'100'
+    goto d0 ;
+Del50 
+    movlw d'50'
+    goto d0 ;
+Del20 
+    movlw d'20'
+    goto d0
+Del05 
+    movlw 0x05
+    goto d0
+Del01
+   movlw 1
+d0 
+    movwf count1
+gh 
+    movlw d'163'
+    movwf counta
+    movlw 0x01
+    movwf countb
+Del_0 decfsz counta,f
+    goto $+2
+    decfsz countb,f
+    goto Del_0
+    decfsz count1,f
+    goto gh
+    return

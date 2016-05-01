@@ -1,0 +1,7 @@
+pinseri(port,rx,tx)   ; pin isimleri
+tx c
+rx c
+  SPBRG = 88
+  RCSTA = b'10010000'
+  TXSTA = b'00100100'
+/

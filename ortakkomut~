@@ -1,0 +1,19 @@
+
+cikarma  ; iki sayıyı çıkarır 
+toplama  ; iki sayıyı toplar 
+carpma  ; iki sayıyı çarpar 
+bolme   ; iki sayıyı böler
+karealma  ;Sayının karesini hesaplar
+for    ; for döngü başı
+next    ;for döngü sonu
+testb    ; pin bir mi? birse testsona kadar işlemleri yap.
+testson    ;testsonu
+eger    ; eger döngü başı.
+egerson    ;eger döngü sonu
+bit168    ;üst ve alt pinleri alır. 
+bekle    ;5 saniyeye kadar bekeleme..
+artir    ;sayıyı 1 artıtır
+azalt    ;sayıyı 1 azaltır
+kucukse    ; sayıyı kontrol eder kucukse kucukson a kadar işlemleri yapar.
+buyukse    ;sayıyı kontrol eder büyükse buyukson a kadar işlemleri yapar.
+esitse    ;sayıyı kontrol eder eşitse esitson a kadar işlemleri yapar.

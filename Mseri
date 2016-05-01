@@ -1,0 +1,25 @@
+
+serioku  macro deg
+  movf  RCREG,W
+  movwf       deg
+  bcf RCSTA,4
+  bsf RCSTA,4
+  endm
+  
+serideg macro deg
+  movf deg,0
+   movwf          TXREG
+  call _bekle500
+  endm
+
+seriyazi macro sbt
+  movlw sbt
+   movwf          TXREG
+  call _bekle500
+  endm
+  
+_duz macro deg
+  movlw .48
+  subwf  deg,1
+  endm
+  

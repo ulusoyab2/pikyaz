@@ -1,0 +1,11 @@
+lcdgiris            ; lcd açılış komutları.
+lcdyaz      ; lcd ye karakter yazdırır.
+lcd3bas      ; lcd ye 4 bayt değişkenin sayısal değerini yazdırır.
+lcd2bas      ; lcd ye 2 bayt değişkenin değerni yazdırır.
+lcdbas      ; lcd ye 1 bayt değikenin sayısal değerini yazdırır.
+lcdsil      ; lcd yi temizler.
+lcdkonum    ; kursoru stenen noktaya taşır. 
+lcdcevirrakam    ; digit1-10 değişkenlerindeki rakamları sayıya çevirir.
+lcdcevirsayi     ; gönderilen sayıyı digit1-10 rakamlara çevirir.
+kursorac         ; lcd kursor gözükür.  yanıp söner.
+kursorkapa       ; lcd kursor gözükmez.

@@ -1,0 +1,16 @@
+# Gambas Project File 3.0
+# Compiled with Gambas 3.5.4
+Title=GraPIC
+Startup=pikyaz
+Version=0.0.31
+Component=gb.image
+Component=gb.qt4
+Component=gb.form
+Component=gb.desktop
+Component=gb.settings
+Component=gb.net
+Component=gb.qt4.ext
+TabSize=4
+ModulePublic=1
+ExecPath=/home/ulusoy/Pikyaz.gambas
+Packager=1
